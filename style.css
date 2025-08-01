@@ -78,7 +78,8 @@ nav {
     color: #fff;
     cursor: pointer;
     position: absolute;
-    margin: right;
+    right: 20px;   /* Move to the right */
+    top: 10px;     /* Align to the top */
 }
 
 .welcome {
