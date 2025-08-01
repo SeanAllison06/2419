@@ -50,28 +50,33 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    z-index: 2;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    z-index: 2;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-weight: 500;
 }
 
 .nav-links a:hover {
     color: #ffd700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 .welcome {
@@ -218,5 +223,32 @@ footer {
 
     footer {
         font-size: 0.9rem;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
     }
 }
