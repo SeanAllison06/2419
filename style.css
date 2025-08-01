@@ -77,6 +77,9 @@ nav {
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
+    position: absolute;
+    right: 20px;   /* Move to the right */
+    top: 20px;     /* Align to the top */
 }
 
 .welcome {
