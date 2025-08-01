@@ -50,8 +50,6 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    position: absolute;
-    top: 20px;     /* Align to the top */
 }
 
 .nav-links {
