@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to 2419</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Unit 2419</div>
+            <ul class="nav-links">
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#shared-spaces">Shared Spaces</a></li>
+                <li><a href="#responsibilities">Tenant Responsibilities</a></li>
+                <li><a href="#house-rules">House Rules</a></li>
+                <li><a href="#rotations">Rotations</a></li>
+            </ul>
+        </nav>
+        <div class="welcome">
+            <h1>Welcome to 2419</h1>
+            <p>Your home away from home. Relax, connect, and enjoy your stay.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Condo Amenities -->
+        <section id="amenities" class="fade-section">
+            <h2>Condo Amenities</h2>
+            <ul>
+                <li>2 Elevators – Easy access to all floors</li>
+                <li>Lobby Desk – For parcels and deliveries</li>
+                <li>Mail Box Room – Stores monthly bills</li>
+                <li>Fire Exit – Includes parcel and water jug area</li>
+                <li>Sauna – Located on the 5th floor</li>
+                <li>Gym – Basic fitness equipment</li>
+                <li>Swimming & Kiddie Pool – For relaxation</li>
+                <li>Admin Office – For condo concerns</li>
+                <li>Roof Deck – Open study & relaxation area</li>
+            </ul>
+        </section>
+
+        <!-- Shared Spaces -->
+        <section id="shared-spaces" class="fade-section">
+            <h2>Shared Spaces</h2>
+            <h3>Living Room (Salas):</h3>
+            <ul>
+                <li>TV with cozy sofa and yellow chairs</li>
+                <li>Board games available</li>
+                <li>Additional power ports via extension cord</li>
+            </ul>
+
+            <h3>Dining Area:</h3>
+            <ul>
+                <li>Plates, bowls, cups, and utensils provided</li>
+                <li>Microwave, large & small rice cookers</li>
+                <li>Shoe storage beneath microwave</li>
+            </ul>
+
+            <h3>Kitchen:</h3>
+            <ul>
+                <li>Induction cooker and sink</li>
+                <li>Shared water jugs</li>
+                <li>Cleaning supplies & utensils stored neatly</li>
+            </ul>
+
+            <h3>Restroom:</h3>
+            <ul>
+                <li>Keep clean and hygienic</li>
+                <li>Scrub floors and walls regularly</li>
+            </ul>
+        </section>
+
+        <!-- Tenant Responsibilities -->
+        <section id="responsibilities" class="fade-section">
+            <h2>Tenant Responsibilities</h2>
+            <ul>
+                <li>Sweep and vacuum daily</li>
+                <li>Participate in water jug rotation (₱30)</li>
+                <li>Replace trash bags and mop 2–3 times/week</li>
+                <li>Conserve electricity and follow AC hours (10 PM–6 AM)</li>
+                <li>Fix sofa and clean restroom after use</li>
+                <li>Respect fellow tenants at all times</li>
+            </ul>
+        </section>
+
+        <!-- House Rules -->
+        <section id="house-rules" class="fade-section">
+            <h2>House Rules</h2>
+            <h3>General Cleanliness:</h3>
+            <ul>
+                <li>Keep kitchen, salas, and restroom clean</li>
+                <li>1st violation: Warning; Next: ₱100 penalty</li>
+            </ul>
+
+            <h3>Salas Rules:</h3>
+            <ul>
+                <li>No personal items left in common areas</li>
+                <li>Turn off TV, fans, and unplug devices after use</li>
+            </ul>
+
+            <h3>Restroom Rules:</h3>
+            <ul>
+                <li>Scrub floors/walls and keep dry</li>
+                <li>Store items properly</li>
+            </ul>
+
+            <h3>Kitchen Rules:</h3>
+            <ul>
+                <li>Wash dishes promptly</li>
+                <li>Return items after use</li>
+            </ul>
+        </section>
+
+        <!-- Rotations -->
+        <section id="rotations" class="fade-section">
+            <h2>Rotations</h2>
+            <h3>Water Jug Rotation (₱30 each):</h3>
+            <p>Sean Dela Cruz → Analeen Cabance → Alyssa Lucido → Jhermuel Barcenas → Marinelle Hernandez</p>
+
+            <h3>Vacuum & Mop Rotation:</h3>
+            <ul>
+                <li>Sunday: Sean</li>
+                <li>Monday: Analeen</li>
+                <li>Tuesday: Alyssa</li>
+                <li>Wednesday: Jhermuel</li>
+                <li>Thursday: Marinelle</li>
+                <li>Friday & Saturday: Sean + 1 Volunteer</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p class="reminder">‼ Important Reminder: Failure to pay monthly dues and utilities will result in a ₱3,000 penalty. ‼</p>
+        <p>Thank you, and once again, welcome to Unit 2419!</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navbar
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in sections on scroll
+        const fadeSections = document.querySelectorAll('.fade-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeSections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Parallax background effect
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            let scrollPosition = window.scrollY;
+            header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+        });
+    </script>
+</body>
+</html>
