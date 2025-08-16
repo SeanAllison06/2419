@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-image: url('dorm1.jpg');
+    background-image: url('dorm1.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -244,3 +244,4 @@ footer {
         display: block;
     }
 }
+
