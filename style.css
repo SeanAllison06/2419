@@ -192,6 +192,35 @@ footer {
     transition: background 0.3s ease;
 }
 
+.penalties-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.penalties-table th,
+.penalties-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.penalties-table th {
+    background: #8b0000; /* Dark red to distinguish from rotation */
+    color: #fff;
+    font-weight: bold;
+}
+
+.penalties-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.penalties-table tr:hover {
+    background: #ffecec;
+    transition: background 0.3s ease;
+}
+    
+
 @media (max-width: 768px) {
     nav {
         flex-direction: row;
@@ -244,4 +273,3 @@ footer {
         display: block;
     }
 }
-
