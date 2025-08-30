@@ -193,12 +193,15 @@ footer {
 }
 
 .penalties-table {
-    width: 90%;         /* smaller than full width */
-    max-width: 800px;   /* keeps it from being too wide */
-    margin: 1rem auto;  /* center horizontally */
+    width: 100%;
     border-collapse: collapse;
-    background: #fff;   /* match section background */
-    border-radius: 8px; /* optional: rounded corners */
+    margin-top: 1rem;
+    background: #fff;
+}
+
+#penalties {
+    padding-left: 3rem;   /* add spacing left/right */
+    padding-right: 3rem;
 }
 
 .penalties-table th,
@@ -276,5 +279,6 @@ footer {
         display: block;
     }
 }
+
 
 
