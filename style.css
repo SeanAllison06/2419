@@ -377,4 +377,19 @@ footer {
     .penalties-table th, .penalties-table td {
         padding: 6px;
     }
+
+    section {
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .rotation-table,
+    .penalties-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
