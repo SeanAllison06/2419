@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2419 Rules and Regulations</title>
+    <meta name="description" content="Welcome to Unit 2419 - Information for tenants including house rules, amenities, and responsibilities">
+    <title>Welcome to Unit 2419</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="dorm1.webp" as="image" type="image/webp">
+    
+    <!-- Load CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        header {
+            background: url('dorm1.webp') center/cover no-repeat;
+            background-attachment: fixed;
+            transition: background-position 0.6s cubic-bezier(0.4,0,0.2,1);
+        }
+    </style>
+    <!-- Meta tags for better SEO and sharing -->
+    <meta name="theme-color" content="#1f4e79">
+    <meta property="og:title" content="Welcome to Unit 2419">
+    <meta property="og:description" content="Information for tenants including house rules, amenities, and responsibilities">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">Unit 2419</div>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#shared-spaces">Shared Spaces</a></li>
-                <li><a href="#responsibilities">Tenant Responsibilities</a></li>
-                <li><a href="#house-rules">House Rules</a></li>
-                <li><a href="#penalties">Penalties</a></li>
-                <li><a href="#rotations">Rotations</a></li>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+            <ul id="nav-links" class="nav-links" role="menu">
+                <li role="none"><a href="#amenities" role="menuitem">Amenities</a></li>
+                <li role="none"><a href="#shared-spaces" role="menuitem">Shared Spaces</a></li>
+                <li role="none"><a href="#responsibilities" role="menuitem">Tenant Responsibilities</a></li>
+                <li role="none"><a href="#house-rules" role="menuitem">House Rules</a></li>
+                <li role="none"><a href="#penalties" role="menuitem">Penalties</a></li>
+                <li role="none"><a href="#rotations" role="menuitem">Rotations</a></li>
             </ul>
         </nav>
         <div class="welcome">
             <h1>Welcome to 2419</h1>
             <p>Espana Grand Residences 1</p>
             <p>G.Tolentino Street, Barangay 469, Sampaloc Manila 1008</p>
+            <a href="#amenities" class="cta-button">View Details</a>
         </div>
     </header>
 
@@ -172,17 +195,18 @@
                 </tr>
                 <tr>
                     <td>4th Offense</td>
-                    <td>₱100 penalty fee + Take over the cleaning rotation for that day.</td>
+                    <td>₱200 penalty fee + Take over the cleaning rotation for that day.</td>
                 </tr>
                 <tr>
                     <td>5th Offense</td>
-                    <td>₱200 penalty fee + General Cleaning (Living Room & Salas, Restroom and Kitchen & Dining Table)</td>
+                    <td>₱400 penalty fee + General Cleaning (Living Room & Salas, Restroom and Kitchen & Dining Table)</td>
                 </tr>
                 <tr>
                     <td>6th Offense & Above</td>
-                    <td>Continues doubling (₱400, 800, ₱1600, etc.) + Stricter group decision</td>
+                    <td>Continues doubling (₱800, ₱1600, etc.) + Stricter group decision</td>
                 </tr>
             </table>
+            <p class="note"><strong>Note:</strong> Penalties will reset every month.</p>
 
             <h3>List of Penalized Tenants</h3>
                 <table class="penalties-table">
@@ -191,24 +215,6 @@
                     <th>Offense</th>
                     <th>Cause</th>
                     <th>Date</th>
-                </tr>
-                <tr>
-                    <td>ALL</td>
-                    <td>1st Offense</td>
-                    <td>Meeting</td>
-                    <td>August 28, 2025</td>
-                </tr>
-                <tr>
-                    <td>Jhermuel</td>
-                    <td>2nd Offense</td>
-                    <td>Salas and CR Lights</td>
-                    <td>August 30, 2025</td>
-                </tr>
-                <tr>
-                    <td>Jhermuel</td>
-                    <td>3rd Offense</td>
-                    <td>Dishes</td>
-                    <td>September 1, 2025</td>
                 </tr>
                 <tr>
                     <td>...</td>
@@ -270,70 +276,114 @@
             <ul>
                 <li>I, <strong>Sean Dela Cruz</strong>, will be the one purchasing the cleaning materials. To ensure transparency and avoid any doubts or misunderstandings, I will provide the official receipt and send a photo of the items. The total cost will be divided equally among the six tenants here. I will collect the payment from each of you only after the purchase has been made.</li>
             </ul>
-            <p class="note"><strong>Note:</strong> Effective <b>August 30, 2025.</b> For inquiries regarding this, please feel free to reach out and messaging me by clicking my facebook link here <strong><a href="https://www.facebook.com/seanallisondc/" >*Sean Allison Dela Cruz*.</a></strong></p>
+            <p class="note"><strong>Note:</strong> Effective <b>October 06, 2025.</b> For inquiries/concerns regarding this or any matter, please feel free to reach out and messaging me by clicking my facebook link here <strong><a href="https://www.facebook.com/seanallisondc/" >*Sean Allison Dela Cruz*.</a></strong></p>
         </section>
     </main>
 
     <footer>
         <p class="reminder">‼ Important Reminder: Failure to pay monthly dues and utilities will result in a ₱3,000 penalty. ‼</p>
         <p><b>Thank you, and once again, welcome to Unit 2419!</b></p>
-        <p><b>Last Update:</b> 12:35 August 30, 2025</p>
+        <p><b>Last Update:</b> 21:00 October 6, 2025</p>
     </footer>
 
-    <script>
-        // Smooth scroll for navbar
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+    <!-- Deferred JavaScript for better performance -->
+    <script defer>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll for navbar
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
 
-        // Fade-in sections on scroll
-        const fadeSections = document.querySelectorAll('.fade-section');
+            // Toggle mobile menu
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !expanded);
+            });
+
+            // Auto-close menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Fade-in sections on scroll using Intersection Observer API
+            const fadeSections = document.querySelectorAll('.fade-section');
+            
+            // Use requestIdleCallback if available for non-critical operations
+            const observerCallback = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, { 
+                threshold: 0.2,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            fadeSections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Throttled scroll events for better performance
+            let lastScrollTime = 0;
+            const scrollThreshold = 10; // ms between scroll events
+            
+            // Parallax effect with throttling
+            window.addEventListener("scroll", () => {
+                const now = Date.now();
+                if (now - lastScrollTime > scrollThreshold) {
+                    lastScrollTime = now;
+                    
+                    // Parallax background effect
+                    const header = document.querySelector("header");
+                    const scrollPosition = window.scrollY;
+                    header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+                    
+                    // Update active navigation link
+                    updateActiveNavLink();
                 }
-            });
-        }, { threshold: 0.2 });
+            }, { passive: true }); // Use passive listener for better scroll performance
+            
+            // Function to update active navigation link
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-links a');
+                
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
 
-        fadeSections.forEach(section => {
-            observer.observe(section);
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active-link');
+                    }
+                });
+            }
         });
-
-        // Parallax background effect
-        window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
-            let scrollPosition = window.scrollY;
-            header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-        });
-
-        // Toggle mobile menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Auto-close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
     </script>
 </body>
 </html>
-
-
-
 
 
 
