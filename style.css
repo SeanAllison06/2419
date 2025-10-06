@@ -357,6 +357,31 @@ footer {
 
 /* Small screens */
 @media (max-width: 480px) {
+    header {
+        height: 100vh;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .welcome {
+        padding: 1.5rem;
+        margin: 0 1rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 220px;
+    }
+
     .welcome h1 {
         font-size: 2rem;
     }
