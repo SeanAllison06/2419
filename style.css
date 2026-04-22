@@ -2,24 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --primary-color: #1f4e79;
-    --secondary-color: #ffd700;
-    --text-color: #333;
-    --bg-color: #f8f9fa;
-    --accent-color: #b22222;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: #333;
+    background-color: #f8f9fa;
     scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 header {
@@ -32,8 +22,6 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-attachment: fixed;
-    will-change: background-position; /* Optimize for animation */
 }
 
 header::after {
@@ -84,15 +72,6 @@ nav {
     color: #ffd700;
 }
 
-.nav-links a.active-link {
-    color: var(--secondary-color);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-links a.active-link::after {
-    width: 80%;
-}
-
 .menu-toggle {
     display: none;
     font-size: 2rem;
@@ -107,35 +86,6 @@ nav {
     margin: auto;
     position: relative;
     z-index: 2;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 15px;
-    max-width: 800px;
-    animation: fadeIn 1.5s ease-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 2rem;
-    background-color: var(--secondary-color);
-    color: #000;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background-color: #ffdf4d;
 }
 
 .welcome h1 {
@@ -153,14 +103,12 @@ main {
 section {
     margin-bottom: 3rem;
     background: #fff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Specify properties for better performance */
-    border-left: 5px solid #1f4e79;
-    contain: content; /* Improve rendering performance */
+    transition: all 0.6s ease-in-out;
 }
 
 section.visible {
@@ -273,7 +221,6 @@ footer {
 }
     
 
-/* Responsive styles */
 @media (max-width: 768px) {
     nav {
         flex-direction: row;
@@ -285,9 +232,8 @@ footer {
         display: none;
         flex-direction: column;
         align-items: center;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
         width: 100%;
         position: absolute;
         top: 70px;
@@ -295,7 +241,6 @@ footer {
         z-index: 105;
         padding: 1rem 0;
         transition: all 0.3s ease;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links li {
@@ -326,95 +271,5 @@ footer {
 
     .menu-toggle {
         display: block;
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    
-    .welcome {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
-    
-    .welcome h1 {
-        font-size: 2.5rem;
-    }
-    
-    section {
-        padding: 1.5rem;
-    }
-    
-    .rotation-table, .penalties-table {
-        font-size: 0.9rem;
-    }
-    
-    main {
-        padding: 2rem 1rem;
-    }
-}
-
-/* Small screens */
-@media (max-width: 480px) {
-    header {
-        height: 100vh;
-        min-height: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-position: center center;
-        background-size: cover;
-    }
-
-    .welcome {
-        padding: 1.5rem;
-        margin: 0 1rem;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 220px;
-    }
-
-    .welcome h1 {
-        font-size: 2rem;
-    }
-    
-    section h2 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.2rem;
-    }
-    
-    .rotation-table, .penalties-table {
-        font-size: 0.8rem;
-    }
-    
-    .rotation-table th, .rotation-table td,
-    .penalties-table th, .penalties-table td {
-        padding: 6px;
-    }
-
-    section {
-        padding: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-        min-width: 0;
-    }
-
-    .rotation-table,
-    .penalties-table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
     }
 }
